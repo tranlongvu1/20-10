@@ -3,48 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chúc mừng 20/10</title>
+  <title>Lời nhắn</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      background: radial-gradient(circle at center, #ffd6e7 0%, #ff99cc 100%);
+      background: linear-gradient(135deg, #ffe6f2, #ffb6c1);
+      font-family: "Poppins", sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      font-family: "Poppins", sans-serif;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #e60073;
       overflow: hidden;
     }
-    h1 {
-      font-size: 48px;
-      color: #e60073;
-      text-shadow: 2px 2px 5px #fff;
-      animation: glow 2s ease-in-out infinite alternate;
+    .msg {
+      font-size: 22px;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
     }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff66a3; }
-      to { text-shadow: 0 0 20px #fff, 0 0 40px #ff3385; }
-    }
-    .rose {
-      width: 120px;
-      height: 120px;
-      background: url('https://i.ibb.co/f0rPZ5Y/rose.png') no-repeat center/contain;
-      animation: spin 10s linear infinite;
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     button {
-      margin-top: 30px;
+      margin-top: 40px;
       padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
       background-color: #e60073;
       color: white;
-      font-size: 18px;
+      border: none;
+      border-radius: 30px;
       cursor: pointer;
+      font-size: 16px;
       transition: 0.3s;
     }
     button:hover {
@@ -54,8 +45,11 @@
   </style>
 </head>
 <body>
-  <div class="rose"></div>
-  <h1>💐 Chúc mừng ngày 20/10 💐</h1>
-  <button onclick="window.location.href='message.html'">💌 Xem lời nhắn</button>
+  <div class="msg">
+    <h1>💌 Gửi đến bạn 💌</h1>
+    <p>Chúc bạn luôn xinh đẹp, hạnh phúc và rạng rỡ như đoá hồng này 🌹<br>
+       Mỗi ngày đều tràn ngập yêu thương và nụ cười 💖</p>
+  </div>
+  <button onclick="window.location.href='index.html'">← Quay lại hoa hồng</button>
 </body>
 </html>
